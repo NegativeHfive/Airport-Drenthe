@@ -11,14 +11,74 @@ Doel : Een samenvatting over de doelen en eisen van dit project.
 
 Website Beschrijving / Doel
 -----------------------
-De doel van de website is om een website voor Drenthe te vouwen. Met behulp van de 
-website kunnen mensen veilig en simpel via Schiphol Drenthe vliegtickets kunnen boeken. 
+Het doel van de website is het aanbieden van een platform waar gebruikers vliegtickets 
+via Schiphol Drenthe kunnen boeken.
 
-Gebruikersrollen
----------------------
-De website bevat uit drie gebruikers. De admin, de medewerkers en de klanten. 
-
+Gebruikers 
+---------------
 Klanten 
------------
+- Klanten kunnen vluchten zien en kiezen. 
+- Als een vlucht al vol is, mogen klanten de volle vlucht niet meer kiezen.
+- Klanten kunnen vliegtickets boeken. 
+- Klanten kunnen stoelen kiezen bij een vliegtuig.
+- Als een stoel al bezit is, kunt de klant de stoel niet meer kunnen of mogen kiezen. 
+- Na het boeken van een vlucht moet een klant een pdf bestaand krijgen
+om zijn/haar vlucht te bevestigen. 
+- Een klant kunt een rapport aanmelden.
+- Een klant kunt ook een vlucht zoeken. 
 
-Klanten moeten en kunnen de website zonder problemen gebruiken. 
+
+
+
+Medewerkers
+---------------------
+- Medewerkers kunnen en moeten inloggen of registeren.
+- Elke vlucht heeft ten minste een instappoort.
+- Medewerkers kunnen hen gegevens verwerken. 
+- Medewerkers kunnen een vlucht toevoegen
+- Medewerkers kunnen een vlucht wijzigen 
+- Medewerkers kunnen een vlucht verwijderen 
+- Medewerkers kunnen een vluchten sorteren. 
+- Medewerkers kunnen het aantal passagiers voor een vlucht kunnen zien. 
+
+
+Admin 
+------------
+- De admin kunt het aantal medewerkers van het bedrijf kunnen zien. 
+- De admin kunt data (grafiek) over vluchten zien. 
+- De admin kunt data exporten als een csv bestaand. 
+
+
+Zakkelijk rolen 
+--------------------
+- Een vlucht kan niet geboekt worden als deze vol is
+- Een stoel kan slechts door een passagier gekozen worden
+- Na boeking ontvang de passagier een PDF bestand.
+- Medewerkers moet ingelogd worden om vluchten te beheren.
+
+
+Fouthandeling
+---------------------
+- Vlucht vol -> Toon melding "Vlucht is vol"
+- Stoel  bezet -> Toon melding "Stoel is al bezit"
+- Medewerker niet ingelogd -> Toegang weigeren.
+
+Use Case voor Passagier
+------------------------------
+1. Klant zoekt voor een vlucht
+2. Klant selecteert de opgezocht vlucht.
+3. Vlucht toont beschijvingen en informatie. 
+4. Systeem controleert stoelen beschikbaarheid.
+5. Klant kiest een stoel.
+6. Klant betaalt voor de vlucht. 
+7. Klant geeft zijn/haar gegevens om de vlucht te bevestigen. 
+8. Klant krijgt een PDF bestaand. 
+9. Gegevens wordt in het syteem opgeslagen. 
+10. Klant wordt terug naar de homepagina gestuurd. 
+
+
+
+Use Case voor Medewerker
+----------------------------------
+1. Medewerker logt in de website. 
+2. Medewerker ziet alle vluchten en kunnen vluchten beheren. 
