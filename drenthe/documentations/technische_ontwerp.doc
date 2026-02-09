@@ -51,5 +51,60 @@ Voor de backend gaan we met PHP werken met OPP (Object Oriented Programming) str
 
 Database
 -----------------------------------
-Voor het database gaan we postgres gebruiken met de naam schiphol_drenthe
+Voor het database gaan we met postgres gebruiken met de naam schiphol_drenthe.
+Namen van tabellen, kolommen en rijen zijn in het engels . Er zijn 4 tabellen 
 
+Een tabel voor users, flight , clients , booking, seats en airlines. In de 
+users tabel zijn er 5 kolommen. ID,  name , email, username en password. De admin's 
+gegevens zijn statisch en worden in de tabel users opgeslagen. Alle kolommen zijn 
+in deze tabel verplicht. 
+
+Flight 
+-------------------------- 
+De flight tabel heeft 6 kolommen. De ID, name, airline_ID, amount_of_seats, price_per_seat and user_ID
+Airline_Id is van de tabel airlines zelfde geldt voor user_Id waar het van de tabel
+users vandaan komt. 
+
+
+Clients
+---------------------------
+De passagers tabel heeft 4 kolommen. De ID, name, email, username en password. Het nut van 
+deze tabel om straaks een geschiedenis van boekingen te laten zien. 
+
+airlines
+-------------------------
+De airlines tabel heeft 2 kolommen. De ID and name. 
+
+Bookings
+-----------------------
+De bookings tabel heeft 6 kolommen. De ID, name_of_passenger, flight_id, airline_ID, seat_ID en client_ID.
+
+Seats
+----------------
+De seat tabel heeft 4 kolommen. De ID, flight_id, seat_number en status. 
+
+
+Relaties
+-------------------------------
+
+- Een user kan meerdere vluchten maken. 
+- Een vlucht kan gemaakt worden door een user.
+- Een vlucht kan meerdere stoelen hebben.
+- Een vlucht behoort tot een vluchtsmaatschappij.
+- Een vlucht kan meerdere boekingen hebben.  
+- Een vluchtsmaatschappij kan meerdere vluchten hebben.
+- Een user kan meerdere vluchtsmaatschappijen maken. 
+- Een klant kan meerdere boekingen maken. 
+- Een boeking kan een klant hebben.
+- Een boeking behoort tot een stoel. 
+- Een stoel behoort tot een passagier. 
+
+
+Veiligheid en Authenticatie
+------------------------------------------
+Alle wachtwoorden zijn gehashed. Voor de inloggen gedeelte gaan we laravel breeze
+gebruiken. 
+
+Testing 
+------------------------------------------
+Voor het testen van functionaliteiten en code gaan we PHPunit testing gebruiken. 
