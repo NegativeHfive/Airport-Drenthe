@@ -1,0 +1,55 @@
+FUNCTIONEEL ONTWERP 
+------------------------------------
+
+Project naam : Schiphol Drenthe
+Gemaakt door : Godrine Manu
+Datum : 06 Febrauri 2026
+Versie : 1.00
+Doel : Specifieke eisen voor dit project
+
+Inhouding
+----------------------------------------
+
+Inleiding 
+Gebruikte technologieen
+Onderdelen
+
+
+Inleiding
+------------------
+Dit document is het technisch ontwerp van de site Schiphol Drenthe. De keuzes op 
+technisch vlak worden hier besprokken. Daarnaast wordt de opdracht kort omgeschreven
+en verdeeld. 
+
+
+Het doel van de website (Schiphol Drenthe) is het aanbieden van een platform waar gebruikers vliegtickets 
+via Schiphol Drenthe kunnen boeken.
+
+De onderdelen die behandeld gaan worden zijn frontend (gebruikers), de backend (logica)
+en het database(data opslagruimte)
+
+Gebruikte technologieen
+----------------------------------------
+
+De project wordt geprogrammerd in PHP met het framework laravel. De frontend wordt gemaakt
+met blade, css en javascript en de backend wordt in PHP gemaakt. Voor de database gaan
+we postgres gebruiken voor het weergeven van grafieke data geburiken we chart.js. We gaan 
+git gebruiken om code te pullen, pushen enz. 
+
+
+Onderdelen
+---------------------
+
+Frontend
+---------------------------
+De frontend wordt met blade, css/tailwind en javascript. Er worden ook libraries gebruikt
+zo als chart js om een visuel overzicht te laten zien en GSAP voor animaties.
+
+Backend 
+--------------------------------
+Voor de backend gaan we met PHP werken met OPP (Object Oriented Programming) structuur. 
+
+Database
+-----------------------------------
+Voor het database gaan we postgres gebruiken met de naam schiphol_drenthe
+
