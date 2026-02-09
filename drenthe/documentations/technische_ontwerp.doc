@@ -54,8 +54,11 @@ Database
 Voor het database gaan we met postgres gebruiken met de naam schiphol_drenthe.
 Namen van tabellen, kolommen en rijen zijn in het engels . Er zijn 4 tabellen 
 
-Een tabel voor users, flight , clients , booking, seats en airlines. In de 
-users tabel zijn er 5 kolommen. ID,  name , email, username en password. De admin's 
+Een tabel voor users, flight , clients , booking, seats en airlines. 
+
+Employees 
+-------------------------------------
+In de users tabel zijn er 5 kolommen. ID,  name , email, roles, username en password. De admin's 
 gegevens zijn statisch en worden in de tabel users opgeslagen. Alle kolommen zijn 
 in deze tabel verplicht. 
 
@@ -82,6 +85,7 @@ De bookings tabel heeft 6 kolommen. De ID, name_of_passenger, flight_id, airline
 Seats
 ----------------
 De seat tabel heeft 4 kolommen. De ID, flight_id, seat_number en status. 
+
 
 
 Relaties
