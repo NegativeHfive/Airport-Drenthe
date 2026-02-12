@@ -1,84 +1,100 @@
-FUNCTIONEEL ONTWERP 
-------------------------------------
+Projectnaam: Schiphol Drenthe
+Gemaakt door: Godrine Manu
+Datum: 06 februari 2026
+Versie: 1.00
+Doel: Een samenvatting van de doelen en functionele eisen van dit project.
 
-Project naam : Schiphol Drenthe
-Gemaakt door : Godrine Manu
-Datum : 06 Febrauri 2026
-Versie : 1.00
-Doel : Een samenvatting over de doelen en eisen van dit project. 
+Websitebeschrijving / Doel
 
+Het doel van de website is het aanbieden van een platform waarop gebruikers vliegtickets via Schiphol Drenthe kunnen boeken.
 
+Gebruikers
+Klanten
 
-Website beschrijving / Doel
------------------------
-Het doel van de website is het aanbieden van een platform waar gebruikers vliegtickets 
-via Schiphol Drenthe kunnen boeken.
+Klanten kunnen beschikbare vluchten bekijken en selecteren.
 
-Gebruikers 
----------------
-Klanten 
-- Klanten kunnen vluchten zien en kiezen. 
-- Als een vlucht al vol is, mogen klanten de volle vlucht niet meer kiezen.
-- Klanten kunnen vliegtickets boeken. 
-- Klanten kunnen stoelen kiezen bij een vliegtuig.
-- Als een stoel al bezit is, kunt de klant de stoel niet meer kunnen of mogen kiezen. 
-- Na het boeken van een vlucht moet een klant een pdf bestaand krijgen
-om zijn/haar vlucht te bevestigen. 
-- Een klant kunt een rapport aanmelden.
-- Een klant kunt ook een vlucht zoeken. 
+Als een vlucht vol is, mogen klanten deze vlucht niet meer kiezen.
 
+Klanten kunnen vliegtickets boeken.
 
+Klanten kunnen een stoel kiezen in het vliegtuig.
 
+Als een stoel al bezet is, mag deze niet meer gekozen worden.
+
+Na het boeken van een vlucht ontvangt de klant een PDF-bestand ter bevestiging van de boeking.
+
+Een klant kan een rapport indienen.
+
+Een klant kan een vlucht zoeken op basis van bepaalde criteria.
 
 Medewerkers
----------------------
-- Medewerkers kunnen en moeten inloggen of registeren.
-- Elke vlucht heeft ten minste een instappoort.
-- Medewerkers kunnen hen gegevens verwerken. 
-- Medewerkers kunnen een vlucht toevoegen
-- Medewerkers kunnen een vlucht wijzigen 
-- Medewerkers kunnen een vlucht verwijderen 
-- Medewerkers kunnen een vluchten sorteren. 
-- Medewerkers kunnen het aantal passagiers voor een vlucht kunnen zien. 
 
+Medewerkers moeten inloggen of zich registreren om toegang te krijgen tot het systeem.
 
-Admin 
-------------
-- De admin kunt het aantal medewerkers van het bedrijf kunnen zien. 
-- De admin kunt data (grafiek) over vluchten zien. 
-- De admin kunt data exporten als een csv bestaand. 
+Elke vlucht heeft minimaal één instappoort.
 
+Medewerkers kunnen hun eigen gegevens beheren.
 
-Zakkelijk rolen 
---------------------
-- Een vlucht kan niet geboekt worden als deze vol is
-- Een stoel kan slechts door een passagier gekozen worden
-- Na boeking ontvang de passagier een PDF bestand.
-- Medewerkers moet ingelogd worden om vluchten te beheren.
+Medewerkers kunnen een vlucht toevoegen.
 
+Medewerkers kunnen een vlucht wijzigen.
 
-Fouthandeling
----------------------
-- Vlucht vol -> Toon melding "Vlucht is vol"
-- Stoel  bezet -> Toon melding "Stoel is al bezit"
-- Medewerker niet ingelogd -> Toegang weigeren.
+Medewerkers kunnen een vlucht verwijderen.
+
+Medewerkers kunnen vluchten sorteren.
+
+Medewerkers kunnen het aantal passagiers per vlucht bekijken.
+
+Admin
+
+De admin kan het aantal medewerkers binnen het bedrijf bekijken.
+
+De admin kan grafische data over vluchten bekijken.
+
+De admin kan data exporteren als een CSV-bestand.
+
+Zakelijke regels
+
+Een vlucht kan niet geboekt worden als deze vol is.
+
+Een stoel kan slechts door één passagier gekozen worden.
+
+Na een succesvolle boeking ontvangt de passagier een PDF-bestand.
+
+Medewerkers moeten ingelogd zijn om vluchten te beheren.
+
+Foutafhandeling
+
+Vlucht vol → Toon melding: "Vlucht is vol."
+
+Stoel bezet → Toon melding: "Stoel is al bezet."
+
+Medewerker niet ingelogd → Toegang weigeren.
 
 Use Case voor Passagier
-------------------------------
-1. Klant zoekt voor een vlucht
-2. Klant selecteert de opgezocht vlucht.
-3. Vlucht toont beschijvingen en informatie. 
-4. Systeem controleert stoelen beschikbaarheid.
-5. Klant kiest een stoel.
-6. Klant betaalt voor de vlucht. 
-7. Klant geeft zijn/haar gegevens om de vlucht te bevestigen. 
-8. Klant krijgt een PDF bestaand. 
-9. Gegevens wordt in het syteem opgeslagen. 
-10. Klant wordt terug naar de homepagina gestuurd. 
 
+De klant zoekt naar een vlucht.
 
+De klant selecteert de gevonden vlucht.
+
+De vluchtinformatie wordt weergegeven.
+
+Het systeem controleert de beschikbaarheid van stoelen.
+
+De klant kiest een beschikbare stoel.
+
+De klant betaalt voor de vlucht.
+
+De klant vult zijn/haar gegevens in om de boeking te bevestigen.
+
+Het systeem genereert een PDF-bevestiging.
+
+De gegevens worden opgeslagen in het systeem.
+
+De klant wordt teruggestuurd naar de homepagina.
 
 Use Case voor Medewerker
-----------------------------------
-1. Medewerker logt in de website. 
-2. Medewerker ziet alle vluchten en kunnen vluchten beheren. 
+
+De medewerker logt in op de website.
+
+De medewerker ziet een overzicht van alle vluchten en kan deze beheren.

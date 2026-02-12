@@ -1,114 +1,190 @@
-FUNCTIONEEL ONTWERP 
-------------------------------------
+Projectnaam: Schiphol Drenthe
+Gemaakt door: Godrine Manu
+Datum: 06 februari 2026
+Versie: 1.00
+Doel: Het vastleggen van de specifieke eisen voor dit project
 
-Project naam : Schiphol Drenthe
-Gemaakt door : Godrine Manu
-Datum : 06 Febrauri 2026
-Versie : 1.00
-Doel : Specifieke eisen voor dit project
+Inhoud
 
-Inhouding
-----------------------------------------
+- Inleiding
 
-Inleiding 
-Gebruikte technologieen
-Onderdelen
+- Gebruikte technologieën
 
+- Onderdelen
 
 Inleiding
-------------------
-Dit document is het technisch ontwerp van de site Schiphol Drenthe. De keuzes op 
-technisch vlak worden hier besprokken. Daarnaast wordt de opdracht kort omgeschreven
-en verdeeld. 
 
+Dit document beschrijft het functioneel ontwerp van de website Schiphol Drenthe.
+De functionele keuzes van het project worden hier toegelicht. Daarnaast wordt de opdracht kort omschreven en onderverdeeld.
 
-Het doel van de website (Schiphol Drenthe) is het aanbieden van een platform waar gebruikers vliegtickets 
-via Schiphol Drenthe kunnen boeken.
+Het doel van de website Schiphol Drenthe is het aanbieden van een platform waarop gebruikers vliegtickets kunnen boeken via Schiphol Drenthe.
 
-De onderdelen die behandeld gaan worden zijn frontend (gebruikers), de backend (logica)
-en het database(data opslagruimte)
+De onderdelen die behandeld worden zijn de frontend (gebruikersinterface), de backend (logica) en de database (dataopslag).
 
-Gebruikte technologieen
-----------------------------------------
+Gebruikte technologieën
 
-De project wordt geprogrammerd in PHP met het framework laravel. De frontend wordt gemaakt
-met blade, css en javascript en de backend wordt in PHP gemaakt. Voor de database gaan
-we postgres gebruiken voor het weergeven van grafieke data geburiken we chart.js. We gaan 
-git gebruiken om code te pullen, pushen enz. 
+Het project wordt geprogrammeerd in PHP met het framework Laravel.
 
+De frontend wordt ontwikkeld met Blade, CSS/Tailwind en JavaScript.
+De backend wordt ontwikkeld in PHP volgens een objectgeoriënteerde structuur (OOP).
+
+Voor de database wordt PostgreSQL gebruikt.
+Voor het weergeven van grafische data wordt Chart.js gebruikt.
+
+Daarnaast wordt Git gebruikt voor versiebeheer (pushen, pullen en samenwerken).
 
 Onderdelen
----------------------
-
 Frontend
----------------------------
-De frontend wordt met blade, css/tailwind en javascript. Er worden ook libraries gebruikt
-zo als chart js om een visuel overzicht te laten zien en GSAP voor animaties.
 
-Backend 
---------------------------------
-Voor de backend gaan we met PHP werken met OPP (Object Oriented Programming) structuur. 
+De frontend wordt ontwikkeld met Blade, CSS/Tailwind en JavaScript.
+Er worden externe libraries gebruikt, zoals:
+
+Chart.js voor het visueel weergeven van data
+
+GSAP voor animaties
+
+Backend
+
+Voor de backend wordt gewerkt met PHP binnen het Laravel-framework.
+Er wordt gebruikgemaakt van een objectgeoriënteerde programmeerstructuur (OOP).
 
 Database
------------------------------------
-Voor het database gaan we met postgres gebruiken met de naam schiphol_drenthe.
-Namen van tabellen, kolommen en rijen zijn in het engels . Er zijn 4 tabellen 
 
-Een tabel voor employees , flight , clients , booking, seats en airlines. 
+Voor de database wordt PostgreSQL gebruikt met de naam schiphol_drenthe.
 
-Employees 
--------------------------------------
-In de users tabel zijn er 5 kolommen. ID,  name , email, roles, username en password. De admin's 
-gegevens zijn statisch en worden in de tabel users opgeslagen. Alle kolommen zijn 
-in deze tabel verplicht. 
+De namen van tabellen en kolommen worden in het Engels geschreven.
 
-Flight 
--------------------------- 
-De flight tabel heeft 6 kolommen. De ID, name, airline_ID, amount_of_seats, price_per_seat and user_ID
-Airline_Id is van de tabel airlines zelfde geldt voor user_Id waar het van de tabel
-users vandaan komt. 
+Er worden zes tabellen gebruikt:
 
+employees
 
-Clients
----------------------------
-De passagers tabel heeft 4 kolommen. De ID, name, email, username en password. Het nut van 
-deze tabel om straaks een geschiedenis van boekingen te laten zien. 
+flights
+
+clients
+
+bookings
+
+seats
 
 airlines
--------------------------
-De airlines tabel heeft 2 kolommen. De ID and name. 
+
+Database Tabellen
+Employees
+
+De users-tabel bevat vijf kolommen:
+
+id
+
+name
+
+email
+
+username
+
+password
+
+De gegevens van de admins worden in deze tabel opgeslagen.
+Alle kolommen zijn verplicht.
+
+Flight
+
+De flights-tabel bevat zes kolommen:
+
+id
+
+name
+
+airline_id
+
+amount_of_seats
+
+price_per_seat
+
+user_id
+
+De kolom airline_id verwijst naar de tabel airlines.
+De kolom user_id verwijst naar de tabel users.
+
+Clients
+
+De clients-tabel bevat vijf kolommen:
+
+id
+
+name
+
+email
+
+username
+
+password
+
+Deze tabel wordt gebruikt om een geschiedenis van boekingen per klant bij te houden.
+
+Airlines
+
+De airlines-tabel bevat twee kolommen:
+
+id
+
+name
 
 Bookings
------------------------
-De bookings tabel heeft 5 kolommen. De ID, flight_id, airline_ID, seat_ID en client_ID.
+
+De bookings-tabel bevat vijf kolommen:
+
+id
+
+flight_id
+
+airline_id
+
+seat_id
+
+client_id
 
 Seats
-----------------
-De seat tabel heeft 4 kolommen. De ID, flight_id, seat_number en status. 
 
+De seats-tabel bevat vier kolommen:
 
+id
+
+flight_id
+
+seat_number
+
+status
 
 Relaties
--------------------------------
 
-- Een user kan meerdere vluchten maken. 
-- Een vlucht kan gemaakt worden door een user.
-- Een vlucht kan meerdere stoelen hebben.
-- Een vlucht behoort tot een vluchtsmaatschappij.
-- Een vlucht kan meerdere boekingen hebben.  
-- Een vluchtsmaatschappij kan meerdere vluchten hebben.
-- Een user kan meerdere vluchtsmaatschappijen maken. 
-- Een klant kan meerdere boekingen maken. 
-- Een boeking kan een klant hebben.
-- Een boeking behoort tot een stoel. 
-- Een stoel behoort tot een passagier. 
+Een user kan meerdere vluchten aanmaken.
 
+Een vlucht wordt aangemaakt door één user.
+
+Een vlucht kan meerdere stoelen hebben.
+
+Een vlucht behoort tot één luchtvaartmaatschappij.
+
+Een vlucht kan meerdere boekingen hebben.
+
+Een luchtvaartmaatschappij kan meerdere vluchten hebben.
+
+Een user kan meerdere luchtvaartmaatschappijen aanmaken.
+
+Een klant kan meerdere boekingen maken.
+
+Een boeking behoort tot één klant.
+
+Een boeking behoort tot één stoel.
+
+Een stoel behoort tot één vlucht.
 
 Veiligheid en Authenticatie
-------------------------------------------
-Alle wachtwoorden zijn gehashed. Voor de inloggen gedeelte gaan we laravel breeze
-gebruiken. 
 
-Testing 
-------------------------------------------
-Voor het testen van functionaliteiten en code gaan we PHPunit testing gebruiken. 
+Alle wachtwoorden worden gehashed opgeslagen.
+
+Voor het inlogsysteem wordt gebruikgemaakt van Laravel Breeze.
+
+Testing
+
+Voor het testen van functionaliteiten en code wordt gebruikgemaakt van PHPUnit testing.
